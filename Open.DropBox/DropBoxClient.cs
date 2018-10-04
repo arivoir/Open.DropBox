@@ -403,7 +403,7 @@ namespace Open.DropBox
             return (string.IsNullOrWhiteSpace(path) ? "" : "/") + path;
         }
 
-        private new HttpClient GetClient()
+        private HttpClient GetClient()
         {
             var client = new HttpClient(new DropBoxMessageHandler());
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
